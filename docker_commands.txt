@@ -1,3 +1,4 @@
+For Java
 Dockerfile
 FROM openjdk:11
 WORKDIR /app
@@ -14,3 +15,19 @@ o $ docker run -it javaimage
 3.$ docker login -u [Dockerhubusername]
 4.docker tag javaimage Dockerhubusername/javaimage
 5.$ docker push Dockerhubusername/javaimage
+
+For Python
+Docker file
+FROM python:3.10
+WORKDIR /app
+COPY sum_average.py .
+CMD ["python", "sum_average.py"]
+
+
+Docker commands
+1.$ sudo su
+2.$ docker build –t pythonimage .
+o $ docker run -it pythonimage
+3.$ docker login -u [Dockerhubusername]
+4.docker tag pythonimage Dockerhubusername/pythonimage
+5.$ docker push Dockerhubusername/pythonimage
