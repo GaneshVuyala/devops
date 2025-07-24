@@ -31,3 +31,20 @@ o $ docker run -it pythonimage
 3.$ docker login -u [Dockerhubusername]
 4.docker tag pythonimage Dockerhubusername/pythonimage
 5.$ docker push Dockerhubusername/pythonimage
+
+
+For Html
+Docker File
+FROM nginx:alpine
+RUN rm -rf /usr/share/nginx/html/*
+COPY login.html /usr/share/nginx/html/index.html
+EXPOSE 80
+
+
+Docker commands
+1.$ sudo su
+2.$ docker build –t htmlimage .
+o $ docker run -d -p 8080:80 htmlimage
+3.$ docker login -u [Dockerhubusername]
+4.docker tag htmlimage Dockerhubusername/htmlimage
+5.$ docker push Dockerhubusername/htmlimage
