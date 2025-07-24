@@ -1,0 +1,9 @@
+GIT COMMANDS
+1.git init
+2.git status
+3.git add .
+4. git commit -m “ project”
+5.git remote add origin “repository link”
+$ git config --global user.name “username”
+$ git config --global user.email “user@mail.com”
+6.git push origin master
