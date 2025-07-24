@@ -1,0 +1,16 @@
+Dockerfile
+FROM openjdk:11
+WORKDIR /app
+COPY SumAverage.java .
+RUN javac SumAverage.java
+CMD ["java", "SumAverage"]
+
+
+
+Docker commands
+1.$ sudo su
+2.$ docker build –t javaimage .
+o $ docker run -it javaimage
+3.$ docker login -u [Dockerhubusername]
+4.docker tag javaimage Dockerhubusername/javaimage
+5.$ docker push Dockerhubusername/javaimage
